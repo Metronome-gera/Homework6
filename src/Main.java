@@ -33,7 +33,7 @@ public class Main {
         // Задача №8
         int mony = 29000;
         int total = 0;
-        for (int i = 0; i <=12; i++ ){
+        for (int i = 0; total<2459000; i++ ){
             total = total + mony;
             System.out.printf("Месяц " +i+ " сумма накопленийравна " +total+ " рублей");
         }
@@ -43,7 +43,8 @@ public class Main {
         for (int i = 0; i <=12; i++ ){
             full = full + full/100;
             full = full + salary;
-            System.out.printf("Месяц " +i+ " сумма накопленийравна " +full+ " рублей");
+            System.out.printf(" Месяц " +i+ " сумма накопленийравна " +full+ " рублей");
+
         }
         // Задача №10
         int number =2;
@@ -53,5 +54,33 @@ public class Main {
             System.out.printf(number+" * " + i+" = "+ factor+"; ");
 
         }
+
+// Часть 2
+        //Задание №1
+        //  Взято из задачи №8
+        int mony2 = 15000;
+        int total2 = 0;
+        int i = 0;
+        while (total2<2459000) {
+            total2 = total2 + mony2;
+            i = i + 1;
+            if (total2 >= 2459000) {
+                System.out.println(" Месяц " + i + " сумма накоплений равна " + total2);
+            }
+        }
+
+        //Задание №2
+        int number2 = 0;
+        while (number2<=9){
+            number2 = number2 + 1;
+            System.out.printf(" " + number2);
+        }
+        System.out.println("");
+
+        for (int g = 10; g >= 1; g-- ){
+            System.out.printf(g+" ");
+        }
+        //Задача №3
+
     }
 }

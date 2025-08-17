@@ -56,6 +56,10 @@ public class Main {
         }
 
 // Часть 2
+        System.out.println(" ");
+        System.out.println(" Часть 2");
+        System.out.println(" ");
+        System.out.println(" Задача №1");
         //Задание №1
         //  Взято из задачи №8
         int mony2 = 15000;
@@ -68,7 +72,7 @@ public class Main {
                 System.out.println(" Месяц " + i + " сумма накоплений равна " + total2);
             }
         }
-
+        System.out.println(" Задача №2");
         //Задание №2
         int number2 = 0;
         while (number2<=9){
@@ -80,7 +84,58 @@ public class Main {
         for (int g = 10; g >= 1; g-- ){
             System.out.printf(g+" ");
         }
+        System.out.println(" ");
+        System.out.println(" Задача №3 ");
+
         //Задача №3
 
-    }
+        System.out.println(" ");
+        System.out.println(" Задача №4");
+        //Задача №4
+
+        int capital = 15000;
+        int month = 0;
+        while (capital <= 12_000_000){
+            capital = capital + ((capital/100)*7);
+            month = month + 1;
+            System.out.println("Месяц "+ month+" сумма нкаоплений "+ capital);
+        }
+        System.out.println(" Задача №5");
+
+        //Задача №5
+        int capital2 = 15000;
+        int month2 = 0;
+        while (capital2 <= 12_000_000) {
+            capital2 = capital2 + ((capital2 / 100) * 7);
+            month2 = month2 + 1;
+            if (month2 % 6 == 0) {
+                System.out.println("Месяц " + month2 + " сумма нкаоплений " + capital2);
+            }
+        }
+        System.out.println(" Задача №6");
+        //Заача №6
+
+        int capital3 = 15000;
+        int month3 = 0;
+        while (month3 <= (12*9)) {
+            capital3 = capital3 + ((capital3 / 100) * 7);
+            month3 = month3 + 1;
+            if (month3 % 6 == 0) {
+                System.out.println("Месяц " + month3 + " сумма нкаоплений " + capital3);
+            }
+        }
+        //Задача №7
+
+        int day = 3;
+        int takt = 0;
+        System.out.println("Сегодня пятница " + day + " число. Необходимо подготовить отчет");
+        while ( day <=31) {
+            day = day + 1;
+            takt = takt + 1;
+            if (takt % 7 == 0) {
+                System.out.println("Сегодня пятница " + day + " число. Необходимо подготовить отчет");
+            }
+        }
+
+        }
 }

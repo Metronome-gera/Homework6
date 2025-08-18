@@ -88,6 +88,14 @@ public class Main {
         System.out.println(" Задача №3 ");
 
         //Задача №3
+        int population = 12_000_000;
+        int increase = 17;
+        int death = 8;
+        int population2 = (population/1000)*(increase-death);
+        for (int year =0; year<=10; year++){
+           population = population + population2;
+            System.out.println("Год "+ year + " численность населения состовляет "+ population);
+        }
 
         System.out.println(" ");
         System.out.println(" Задача №4");
@@ -100,6 +108,7 @@ public class Main {
             month = month + 1;
             System.out.println("Месяц "+ month+" сумма нкаоплений "+ capital);
         }
+        System.out.println(" ");
         System.out.println(" Задача №5");
 
         //Задача №5
@@ -112,6 +121,7 @@ public class Main {
                 System.out.println("Месяц " + month2 + " сумма нкаоплений " + capital2);
             }
         }
+        System.out.println(" ");
         System.out.println(" Задача №6");
         //Заача №6
 
@@ -124,6 +134,8 @@ public class Main {
                 System.out.println("Месяц " + month3 + " сумма нкаоплений " + capital3);
             }
         }
+        System.out.println(" ");
+        System.out.println(" Задача №7");
         //Задача №7
 
         int day = 3;
@@ -136,6 +148,10 @@ public class Main {
                 System.out.println("Сегодня пятница " + day + " число. Необходимо подготовить отчет");
             }
         }
+        System.out.println(" ");
+        System.out.println(" Задача №8");
+        //Задание №8
+
 
         }
 }

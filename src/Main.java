@@ -65,13 +65,14 @@ public class Main {
         int mony2 = 15000;
         int total2 = 0;
         int i = 0;
-        while (total2<2459000) {
-            total2 = total2 + mony2;
+        while (total2<=2459000) {
+            total2 = (total2 + mony2)+((total2/100)*12);
             i = i + 1;
-            if (total2 >= 2459000) {
+           if (total2 <= 2459000); {
                 System.out.println(" Месяц " + i + " сумма накоплений равна " + total2);
             }
         }
+
         System.out.println(" Задача №2");
         //Задание №2
         int number2 = 0;
@@ -89,11 +90,13 @@ public class Main {
 
         //Задача №3
         int population = 12_000_000;
-        int increase = 17;
-        int death = 8;
-        int population2 = (population/1000)*(increase-death);
+        int birthRate = 17;
+        int mortalityRate = 8;
+        int population2 = (population/1000)*(birthRate - mortalityRate);
         for (int year =0; year<=10; year++){
-           population = population + population2;
+            int births = birthRate * population / 1000;
+            int deaths = mortalityRate * population / 1000;
+           population = population + (births-deaths);
             System.out.println("Год "+ year + " численность населения состовляет "+ population);
         }
 
@@ -102,12 +105,17 @@ public class Main {
         //Задача №4
 
         int capital = 15000;
-        int month = 0;
-        while (capital <= 12_000_000){
-            capital = capital + ((capital/100)*7);
+        int month = 1;
+        System.out.println("Месяц "+ month+" сумма нкаоплений "+ capital);
+        int corretAmount = 0;
+        int targetAmount = 12_000_000;
+        while (corretAmount<=targetAmount){
+            corretAmount = corretAmount + capital;
+            corretAmount = (int) (corretAmount + (corretAmount*1.07));
             month = month + 1;
-            System.out.println("Месяц "+ month+" сумма нкаоплений "+ capital);
+            System.out.println("Месяц "+ month+" сумма нкаоплений "+ corretAmount);
         }
+
         System.out.println(" ");
         System.out.println(" Задача №5");
 
@@ -115,7 +123,7 @@ public class Main {
         int capital2 = 15000;
         int month2 = 0;
         while (capital2 <= 12_000_000) {
-            capital2 = capital2 + ((capital2 / 100) * 7);
+            capital2 = (int) (capital2 + (capital2*1.07));
             month2 = month2 + 1;
             if (month2 % 6 == 0) {
                 System.out.println("Месяц " + month2 + " сумма нкаоплений " + capital2);
@@ -128,7 +136,7 @@ public class Main {
         int capital3 = 15000;
         int month3 = 0;
         while (month3 <= (12*9)) {
-            capital3 = capital3 + ((capital3 / 100) * 7);
+            capital3 = (int) (capital3 + (capital3*1.07));
             month3 = month3 + 1;
             if (month3 % 6 == 0) {
                 System.out.println("Месяц " + month3 + " сумма нкаоплений " + capital3);
@@ -140,7 +148,7 @@ public class Main {
 
         int day = 3;
         int takt = 0;
-        System.out.println("Сегодня пятница " + day + " число. Необходимо подготовить отчет");
+            System.out.println("Сегодня пятница " + day + " число. Необходимо подготовить отчет");
         while ( day <=31) {
             day = day + 1;
             takt = takt + 1;
@@ -152,6 +160,17 @@ public class Main {
         System.out.println(" Задача №8");
         //Задание №8
 
+        int bull=79;
+        int carrentYear=2025;
+        int startYear=carrentYear-200;
+        int endYear=carrentYear+100;
+        int y = 0;
+        for (;y<=endYear;y = y + bull){
+            while (y>=startYear && y<=endYear){
+                    System.out.println(y);
+                    break;
+            }
+        }
 
         }
 }
